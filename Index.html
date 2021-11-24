@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRUEBA</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+   
+    <link rel="stylesheet" href="./style.Prueba.css">
+</head>
+
+
+<body>
+    <header>
+
+        <ul class="single-item">
+            <li>
+                <div class="s">
+                <h1>PRODUCTO</h1>
+                <h2>TWO</h2>
+                <BUtton>COMPRAR</BUtton>
+                </div>
+                <img src="./Sin título.png" alt="logo"> 
+            
+            </li>
+            <li>
+            
+            </li>
+        </ul>
+
+
+
+
+    </header>
+    <main>
+        <h1 class="title">Últimos Artículos</h1>
+        <div class="container">
+            <div class="card">
+                <div class="img"></div>
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsumew dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore mang aliqua. Ut enim ad minim veniam, quis</p>
+            </div>
+            <div class="card">
+                <div class="img"></div>
+                <h3>Lorem Ipsum sit amet, conseteture.</h3>
+                <p>Lorem ipsumew dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+            </div>
+            <div class="card">
+                <div class="img"></div>
+                <h3>Lorem Ipsum sit amet, conseteture.</h3>
+                <p>Lorem ipsumew dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore mang aliqua. Ut enim ad minim veniam, quis</p>
+            </div>
+            <div class="card">
+                <div class="img"></div>
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsumew dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+            </div>
+            <div class="card">
+                <div class="img"></div>
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsumew dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore mang aliqua. Ut enim ad minim veniam, quis</p>
+            </div>
+            <div class="card">
+                <div class="img"></div>
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsumew dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore mang aliqua. Ut enim ad minim veniam, quis</p>
+            </div>
+            <div class="card">
+                <div class="img"></div>
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsumew dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+            </div>
+            <div class="card">
+                <div class="img"></div>
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsumew dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <h1 class="h1">FORMULARIO</h1>
+        </div>
+        <form id="formulario" method="POST" action="">
+            <div id="grupo-nombre">
+                <input required="true" type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <p class="form_input-error"> El nombre teine que ser de 2 a 15 digitos</p>
+            </div>
+            <div id="grupo-apellido">
+                <input required="true" type="text" id="apellido" name="apellido" placeholder="Apellido"><br>
+                <p class="form_input-error"> El apellido teine que ser de 2 a 15 digitos</p>
+            </div>
+            <div id="grupo-email">
+                <input id="email" required="true" type="email" name="email" placeholder="e-Mail"><br>
+                <p class="form_input-error"> El e-mail no es válido</p>
+            </div>
+            <div id="grupo-departamento">
+                <select required="true" id="departamento" name="departamento" onchange="cargarLocalidades();">
+                    <option value="">Departamento</option>
+                </select>
+                <p class="form_input-error"> El departamento es obligatorio</p>
+            </div>
+            <div id="grupo-localidad">
+                <select required="true" id="localidad" name="localidad">
+                    <option value="">Localidad</option>
+                </select><br>
+                <p class="form_input-error"> La localidad es obligatoria</p>
+            </div>
+            <div id="grupo-ci">
+                <input id="ci" required="true" type="number" name="ci" placeholder="C.I.">
+                <p class="form_input-error"> La cedula no es válida</p>
+            </div>
+            <label id="check">
+                <input id="box" required="true" type="checkbox">
+                Acepto las bases y condiciones
+            </label><br>
+            <button type="submit" id="button">Enviar</button>
+        </form>
+    </footer>
+    <script src="./data.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript" >
+        $('.single-item').slick();
+    </script>
+</body>
+
+</html>
