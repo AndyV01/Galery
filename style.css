@@ -6,39 +6,53 @@
   }
 li{
     background-color: rgb(190, 187, 187); 
+    height: 80%;
 }
 .s{
     margin-left: 15vw;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 h1{
     font-size: 20px;
+    
 }
 .price{
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(3, 1fr);
-    margin-left: 55vw;
-    margin-top: 60px;
+    margin-left: 52vw;
+    margin-top: 40px;
     width: 10vw;
     z-index: 10;
     position: relative;
     transform: translateY(-250px);
     color: white;
-    text-align: left;
+
+
+}
+.money{
+    transform: translateY(40px);
+}
+.mes{
+    transform: translateY(-15px);
 }
 .number{
     grid-column: 1;
     grid-row: span 3;
     font-size: 100px;
+    transform: translateY(-30px);
+    font-weight: bold;
 }
 h2{
     font-size: 120px;
     color: rgb(122, 122, 122);
-    font-weight: bolder;
+    font-family: 'Anton', sans-serif;
 }
-.slick-slide {
-    height: 45vh;
+.slick-list {
+    height: 50vh;
+}
+.slick-track{
+    height: 40vh;
 }
 .slick-arrow{
     background-color: white;
@@ -47,7 +61,7 @@ h2{
     width: 60px;
     height: 60px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-90%);
     border-radius: 50%;
     cursor: pointer;
     border: 0;
@@ -81,13 +95,14 @@ h2{
 }
 img{
     z-index: 8 !important;
-    height: 60vh;
+    height: 55vh;
     width:55vw;
     mix-blend-mode: multiply;
     margin-left: 30vw;
     filter: grayscale(100%);
     transform: translateY(-140%);
     position: absolute !important;
+    opacity: 100%;
 }
 
 main{
@@ -133,7 +148,7 @@ p{
    cursor: pointer; 
    width: 20vw;
    letter-spacing: 0.25em;
-   font-weight: bold
+   font-weight: bold;
 }
 h3{
     margin: 10px 20px;
