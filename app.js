@@ -34,7 +34,5 @@ app.get("/news",function(req, res){
 app.get("/contact",function(req, res){
     res.render("contact")
 })
-
-app.listen(4000, () => {
-    console.log('Server is running at port 4000');
-});
+const PORT = 3000;
+app.listen(PORT);
