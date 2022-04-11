@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALERY</title>
+    <link rel="stylesheet" href="./css/menu.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <main>
+        <div class="title">
+            <h1 class="sub">Independence</h1>
+            <h1>The Artzone</h1>
+            <h1 class="gal">GALERY.</h1>
+        </div>
+        <section>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="c swiper-slide">
+                        <img src="./images/klimt01.jpg" class="peli" alt="Gustav-Klimt">
+                        <h3 class="text">Klimt Art</h3>
+                    </div>
+                    <div class="c swiper-slide">
+                        <img src="./images/klimt02.jpg" class="peli" alt="Gustav-Klimt">
+                        <h3 class="text">Klimt Art</h3>
+                    </div>
+                    <div class="c swiper-slide">
+                        <img src="./images/Gustav-Klimt.jpg" class="peli" alt="Gustav-Klimt">
+                        <h3 class="text">Klimt Art</h3>
+                    </div>
+                    <div class="c swiper-slide">
+                        <img src="./images/kilmi.jpg" class="peli" alt="Gustav-Klimt">
+                        <h3 class="text">Klimt Art</h3>
+                    </div>
+                    <div class="c swiper-slide">
+                        <img src="./images/klimt03.jpg" class="peli" alt="Gustav-Klimt">
+                        <h3 class="text">Klimt Art</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include ('footer'); %>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <!-- footer menu -->
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) =>
+                item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+            item.addEventListener('click', activeLink));
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

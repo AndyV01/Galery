@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <section>
+      <form id="formulario" method="POST" action="">
+        <div id="grupo-nombre">
+          <input required="true" type="text" id="nombre" name="nombre" placeholder="Nombre">
+          <p class="form_input-error"> El nombre teine que ser de 2 a 15 digitos</p>
+        </div>
+        <div id="grupo-apellido">
+          <input required="true" type="text" id="apellido" name="apellido" placeholder="Apellido"><br>
+          <p class="form_input-error"> El apellido teine que ser de 2 a 15 digitos</p>
+        </div>
+        <div id="grupo-email">
+          <input id="email" required="true" type="email" name="email" placeholder="e-Mail"><br>
+          <p class="form_input-error"> El e-mail no es válido</p>
+        </div>
+        <div id="grupo-departamento">
+          <select required="true" id="departamento" name="departamento" onchange="cargarLocalidades();">
+            <option value="">Departamento</option>
+          </select>
+          <p class="form_input-error"> El departamento es obligatorio</p>
+        </div>
+        <div id="grupo-localidad">
+          <select required="true" id="localidad" name="localidad">
+            <option value="">Localidad</option>
+          </select><br>
+          <p class="form_input-error"> La localidad es obligatoria</p>
+        </div>
+        <div id="grupo-ci">
+          <input id="ci" required="true" type="number" name="ci" placeholder="C.I.">
+          <p class="form_input-error"> La cedula no es válida</p>
+        </div>
+        <label id="check">
+          <input id="box" required="true" type="checkbox">
+          Acepto las bases y condiciones
+        </label><br>
+        <button type="submit" id="button">Enviar</button>
+      </form>
+
+    </section>
+  </main>
+  <footer>
+    <div class="navegation">
+      <ul>
+        <li class="list">
+          <a href="/news">
+            <span class="icon">
+              <ion-icon name="heart-outline"></ion-icon>
+            </span>
+            <span class="text">News</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="/">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list active">
+          <a href="/contact">
+            <span class="icon">
+              <ion-icon name="people-outline"></ion-icon>
+            </span>
+            <span class="text">Contact</span>
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </div>
+  </footer>
+  <script src="../js/data.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <!-- footer menu -->
+  <script>
+    const list = document.querySelectorAll('.list');
+    function activeLink() {
+      list.forEach((item) =>
+        item.classList.remove('active'));
+      this.classList.add('active');
+    }
+    list.forEach((item) =>
+      item.addEventListener('click', activeLink));
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

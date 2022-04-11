@@ -1,0 +1,23 @@
+{
+  "name": "prueba1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndyV01/Prototipo.git"
+  },
+  "author": "andres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndyV01/Prototipo/issues"
+  },
+  "homepage": "https://github.com/AndyV01/Prototipo#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}

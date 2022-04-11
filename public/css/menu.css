@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../images/fondoh.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+}
+section{
+height: 50vh;
+}
+main{
+    width:100%;
+    height: 85%;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+.swiper{
+    height: 350px;
+    padding: 40px 0 !important;
+}
+.c{
+    background: linear-gradient(to bottom, transparent, rgba(243, 151, 255, 0.1));
+    border-radius: 20px;
+    width: 170px !important;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+.peli{
+    width: 80%;
+     object-fit: cover;
+     padding-top: 20px;
+ }
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.title{
+ font-size: 1.6em;
+ font-family: 'Playfair Display', serif;
+ padding-top: 4rem;
+ padding-left: 3rem;
+ padding-bottom: 1rem;
+
+ 
+}
+.gal{
+    font-size: 2.6em;
+}
+.sub{
+    font-size: 1em;
+}
+.navegation{
+    position: relative;
+    width: 85%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    
+}
+.navegation ul {
+    display: flex;
+    gap: 50px;
+    padding: 0;
+}
+.navegation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navegation ul li a {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.navegation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 00.5s;
+    color: white;
+}
+.navegation ul li.active a .icon {
+    transform: translateY(-35px);
+}
+.text{
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+.navegation ul li a .text{
+
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 0.5em;
+    transition: 0.5s;
+    opacity: 0;
+    font-family: "poppins", sans-serif;
+    transform: translateY(25px);
+}
+.navegation ul li.active a .text{
+    opacity: 1;
+    transform: translateY(12px);
+}
+.indicator{
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: radial-gradient( transparent, #c6e8f6); 
+    border-radius: 50%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+}
+.navegation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px *0));
+}
+.navegation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(120px *1));
+}
+.navegation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(120px *2));
+}
+

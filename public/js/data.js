@@ -1,3 +1,4 @@
+
 function cargarDepartamentos() {
     var array = ["Artigas", "Canelones", "Montevideo", "Salto"];
     array.sort();
