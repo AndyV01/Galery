@@ -1,89 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-</head>
-<body>
-    <main>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/campo.jpg" alt="">
-            <br>
-            <h1>Gustav Klimt</h1>
-          </div>
-          <div class="swiper-slide">Slide 2
-            <img src="./images/TelaDebig.jpg" alt="">
-          </div>
-          <div class="swiper-slide">Slide 3
-            <img src="./images/lifeball-1.jpg" alt="">
-          </div>
-          <div class="swiper-slide">Slide 4
-            <img src="./images/pallas-athena.jpg" alt="">
-          </div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div> 
-    </main>
-    <footer>
-        <div class="navegation">
-          <ul>
-            <li class="list active">
-              <a href="/news">
-                <span class="icon">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </span>
-                <span class="text">News</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="/">
-                <span class="icon">
-                  <ion-icon name="home-outline"></ion-icon>
-                </span>
-                <span class="text">Home</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="/contact">
-                <span class="icon">
-                  <ion-icon name="people-outline"></ion-icon>
-                </span>
-                <span class="text">Contact</span>
-              </a>
-            </li>
-            <div class="indicator"></div>
-          </ul>
-        </div>
-      </footer>
-        <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
-      <!-- footer menu -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <main>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/campo.jpg" alt="">
+          <br>
+          <h1>Gustav Klimt</h1>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/TelaDebig.jpg" alt="">
+          <br>
+          <h1>Tela Devig</h1>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/lifeball-1.jpg" alt="">
+          <br>
+          <h1>Lifeball</h1>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/pallas-athena.jpg" alt="">
+          <br>
+          <h1>Pallas Athena</h1>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/maria-de-medici.png" alt="">
+          <br>
+          <h1>Maria de Medici</h1>
+          <p>María de Médici fue princesa del Gran Ducado de Toscana desde su nacimiento y reina consorte de Francia,
+            como la segunda esposa del rey Enrique IV de Francia —de 1600 a 1610— y Reina Regente de Francia hasta la
+            mayoría de edad de su hijo, el futuro rey Luis XIII de Francia —de 1610 a 1617</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/luisxivdeFrancia.png" alt="">
+          <br>
+          <h1>Luis XIV de Francia</h1>
+          <p>Luis XIV de Francia, llamado «el Rey Sol» o Luis el Grande, fue rey de Francia y de Navarra​ desde el 14 de
+            mayo de 1643 hasta su muerte, con 76 años de edad y 72 de reinado.​ También fue copríncipe de Andorra y
+            conde rival de Barcelona. Luis XIV fue el primogénito y sucesor de Luis XIII y de Ana de Austria.</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/elizabeth.png" alt="">
+          <br>
+          <h1>Elizabeth I</h1>
+          <p>Isabel I de Inglaterra, a menudo referida como la Reina Virgen, Gloriana o la Buena Reina Bess, fue reina
+            de Inglaterra e Irlanda desde el 17 de noviembre de 1558 hasta el día de su muerte. Isabel fue la quinta y
+            última monarca de la dinastía Tudor.</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/carlosV.jpg" alt="">
+          <br>
+          <h1>Carlos V</h1>
+          <p>Carlos I de España y V del Sacro Imperio Romano Germánico, llamado «el César», reinó junto con su madre,
+            Juana I de Castilla —esta última de forma solo nominal y hasta 1555, en todos los reinos y territorios
+            hispánicos con el nombre de Carlos I desde 1516 hasta 1556</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </main>
+  <footer>
+    <div class="navegation">
+      <ul>
+        <li class="list active">
+          <a href="/news">
+            <span class="icon">
+              <ion-icon name="heart-outline"></ion-icon>
+            </span>
+            <span class="text">News</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="/">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="/contact">
+            <span class="icon">
+              <ion-icon name="people-outline"></ion-icon>
+            </span>
+            <span class="text">Contact</span>
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </div>
+  </footer>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <!-- footer menu -->
   <script>
     const list = document.querySelectorAll('.list');
     function activeLink() {
@@ -97,4 +129,5 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
