@@ -35,6 +35,4 @@ app.get("/contact",function(req, res){
     res.render("contact")
 })
 const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+app.listen(PORT || 5000);
