@@ -34,5 +34,5 @@ app.get("/news",function(req, res){
 app.get("/contact",function(req, res){
     res.render("contact")
 })
-const PORT = 3000;
-app.listen(PORT || 5000);
+
+app.listen(process.env.PORT || 3000);
