@@ -12,7 +12,7 @@
     display: block;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 110vh;
 }
 main{
     width:100%;
@@ -108,10 +108,10 @@ textarea{
 }
 #check{
     text-align: justify;
-    color: white;
 }
 label {
     margin-top: 10px;
+    color: rgb(64, 63, 63);
   }
 
   footer {
