@@ -13,7 +13,7 @@ body{
     display: block;
     justify-content: center;
     align-items: center;
-    height: 110vh;
+    height: 95vh;
 }
 section{
 height: 50vh;
@@ -28,6 +28,11 @@ main{
 .swiper{
     height: 350px;
     padding: 40px 0 !important;
+}
+.swiper-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 15px !important;
 }
 .c{
     background: linear-gradient(to bottom, transparent, rgba(243, 151, 255, 0.1));
@@ -72,10 +77,8 @@ footer {
 .title{
  font-size: 1.6em;
  font-family: 'Playfair Display', serif;
- padding-top: 4rem;
+ padding-top: 2rem;
  padding-left: 3rem;
- padding-bottom: 1rem;
-
 }
 .gal{
     font-size: 2.6em;
