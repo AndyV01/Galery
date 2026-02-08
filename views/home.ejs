@@ -1,14 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GALERY</title>
-    <link rel="stylesheet" href="./css/menu.css">
+    <title>GALLERY - Independence The Artzone</title>
+    <link rel="stylesheet" href="/css/menu.css">
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* TÍTULO */
+        .title {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+        }
+
+        .title h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: 10px 0;
+        }
+
+        .title .sub {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #999;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .title .gal {
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 4rem;
+        }
+
+        /* SECCIÓN SWIPER */
+        section {
+            width: 100%;
+            flex: 1;
+            padding: 40px 0;
+            background-image: url(../images/fondoh.jpg);
+        }
+
+        /* SWIPER CONTAINER */
+        .swiper {
+            width: 100%;
+            height: 350px;
+            padding: 20px 0;
+        }
+
+        .swiper-wrapper {
+            align-items: center;
+        }
+
+        .swiper-slide {
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: grab;
+        }
+
+        .swiper-slide:active {
+            cursor: grabbing;
+        }
+
+        /* CONTENEDOR DE LA IMAGEN */
+        .c {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* IMÁGENES */
+        .peli {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .c:hover .peli {
+            transform: scale(1.05);
+        }
+
+        /* TÍTULO DE LA IMAGEN */
+        .c h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 30px 20px 20px;
+            font-size: 1.5rem;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* BOTONES DE NAVEGACIÓN */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #fff !important;
+            background: rgba(255, 255, 255, 0.1);
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 20px !important;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* PAGINACIÓN */
+        .swiper-pagination-bullet {
+            background: #fff !important;
+            opacity: 0.5;
+            width: 12px;
+            height: 12px;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d) !important;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .title h1 {
+                font-size: 2.5rem;
+            }
+
+            .title .gal {
+                font-size: 3rem;
+            }
+
+            .swiper {
+                height: 500px;
+            }
+
+            .peli {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .title h1 {
+                font-size: 2rem;
+            }
+
+            .title .sub {
+                font-size: 1rem;
+            }
+
+            .title .gal {
+                font-size: 2.5rem;
+            }
+
+            .swiper {
+                height: 450px;
+            }
+
+            .peli {
+                height: 350px;
+            }
+
+            .c h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                padding: 40px 15px 30px;
+            }
+
+            .title h1 {
+                font-size: 1.5rem;
+            }
+
+            .title .gal {
+                font-size: 2rem;
+            }
+
+            .swiper {
+                height: 400px;
+            }
+
+            .peli {
+                height: 300px;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                width: 40px !important;
+                height: 40px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -16,54 +246,81 @@
         <div class="title">
             <h1 class="sub">Independence</h1>
             <h1>The Artzone</h1>
-            <h1 class="gal">GALERY.</h1>
+            <h1 class="gal">GALLERY.</h1>
         </div>
+        
         <section>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="c swiper-slide">
-                        <img src="./images/klimt01.jpg" class="peli" alt="Gustav-Klimt">
+                        <img src="/images/klimt01.jpg" class="peli" alt="Gustav Klimt Art">
                         <h3>Klimt Art</h3>
                     </div>
                     <div class="c swiper-slide">
-                        <img src="./images/klimt02.jpg" class="peli" alt="Gustav-Klimt">
+                        <img src="/images/klimt02.jpg" class="peli" alt="Gustav Klimt Art">
                         <h3>Klimt Art</h3>
                     </div>
                     <div class="c swiper-slide">
-                        <img src="./images/Gustav-Klimt.jpg" class="peli" alt="Gustav-Klimt">
+                        <img src="/images/Gustav-Klimt.jpg" class="peli" alt="Gustav Klimt Art">
                         <h3>Klimt Art</h3>
                     </div>
                     <div class="c swiper-slide">
-                        <img src="./images/kilmi.jpg" class="peli" alt="Gustav-Klimt">
+                        <img src="/images/kilmi.jpg" class="peli" alt="Gustav Klimt Art">
                         <h3>Klimt Art</h3>
                     </div>
                     <div class="c swiper-slide">
-                        <img src="./images/klimt03.jpg" class="peli" alt="Gustav-Klimt">
+                        <img src="/images/klimt03.jpg" class="peli" alt="Gustav Klimt Art">
                         <h3>Klimt Art</h3>
                     </div>
                     <div class="c swiper-slide">
-                        <img src="./images/lifeball-1.jpg" class="peli" alt="Gustav-Klimt">
+                        <img src="/images/lifeball-1.jpg" class="peli" alt="Gustav Klimt Art">
                         <h3>Klimt Art</h3>
                     </div>
+                    
                 </div>
+                
             </div>
         </section>
     </main>
-    <%- include ('footer'); %>
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-   
-    <!-- footer menu -->
+    
+    <%- include('footer'); %>
+    
+    <!-- Swiper JS (versión más reciente) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+
+    allowTouchMove: false, 
+    loop: false,
+    rewind: false,
+
+    autoplay: false,
+    keyboard: false, 
+
+    effect: "slide", 
+
+    navigation: false, 
+    pagination: false, 
+
+    watchOverflow: true,
+  });
+</script>
+    
+    <!-- Footer menu script -->
     <script>
         const list = document.querySelectorAll('.list');
         function activeLink() {
-            list.forEach((item) =>
-                item.classList.remove('active'));
+            list.forEach((item) => item.classList.remove('active'));
             this.classList.add('active');
         }
-        list.forEach((item) =>
-            item.addEventListener('click', activeLink));
+        list.forEach((item) => item.addEventListener('click', activeLink));
     </script>
+    
+    <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

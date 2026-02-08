@@ -7,18 +7,19 @@
     
   }
   body{
-    background-image: url(../images/fondoh.jpg);
-    background-size: cover;
+    background: #000;
     display: block;
     justify-content: center;
     align-items: center;
-    height: 110vh;
+    height: 100vh;
 }
 main{
+    background-image: url(../images/fondoh.jpg);
+    background-size: cover;
     width:100%;
-    height: 85%;
+    height: 88%;
     border-radius: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding-top:3rem;
     text-align: center;
 }
@@ -120,6 +121,7 @@ label {
     justify-content: center;
     align-items: center;
     text-align: center;
+   
 }
 
 .navegation{
